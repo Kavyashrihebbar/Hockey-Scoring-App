@@ -4,7 +4,7 @@ The Hockey Scoring App is a simple and interactive application designed to help 
 It provides an easy-to-use interface for creating teams, adding players, and creating matches.
 
 ## Features
--User Authentication & Access Control 
+- User Authentication & Access Control 
 - Add and manage hockey teams
 - Live score updates
 - Match Analytics & Leaderboards
