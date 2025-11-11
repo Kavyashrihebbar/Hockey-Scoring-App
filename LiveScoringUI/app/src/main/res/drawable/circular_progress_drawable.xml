@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <shape android:shape="oval">
+            <stroke
+                android:width="6dp"
+                android:color="#FFFFFF"
+                android:dashWidth="6dp"
+                android:dashGap="2dp" />
+        </shape>
+    </item>
+</layer-list>

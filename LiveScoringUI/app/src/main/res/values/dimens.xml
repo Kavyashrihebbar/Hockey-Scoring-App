@@ -1,0 +1,3 @@
+<resources>
+    <dimen name="recycler_item_spacing">12dp</dimen>
+</resources>

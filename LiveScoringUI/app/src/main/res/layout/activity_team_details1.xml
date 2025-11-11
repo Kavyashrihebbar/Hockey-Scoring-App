@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Top App Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/outline_arrow_back_24"
+            app:tint="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teams"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:layout_marginRight="30dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+    <!-- Team name -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/teamCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical">
+
+        <!-- Editable Team Name -->
+        <EditText
+            android:id="@+id/teamNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Team Name"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="4dp"
+            android:inputType="textCapWords"
+            android:background="@null"/>
+
+    </LinearLayout>
+
+    <!-- Player count -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="12dp">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="39dp"
+            android:src="@drawable/outline_groups_24"
+            android:contentDescription="Player Icon"
+            android:layout_marginLeft="6dp"/>
+
+        <TextView
+            android:id="@+id/playerCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 players"
+            android:textSize="16sp"
+            android:paddingStart="8dp"
+            android:textColor="#FF000000"/>
+    </LinearLayout>
+
+
+    <!-- RecyclerView for players -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/playerRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Add Player button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addPlayerBtn"
+        android:layout_width="163dp"
+        android:layout_height="45dp"
+        android:text="Add Player"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/blue"
+        android:layout_marginBottom="6dp"
+        app:cornerRadius="90dp"/>
+    <!-- Bottom Navigation -->
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        app:itemBackground="@android:color/transparent"
+        app:menu="@menu/bottom_nav_menu" />
+
+</LinearLayout>

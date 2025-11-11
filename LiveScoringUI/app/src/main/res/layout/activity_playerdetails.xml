@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textColor="#FF000000"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textSize="15sp"/>
+
+        <!-- Row for Jersey No + Position -->
+        <LinearLayout
+            android:id="@+id/rowJerseyPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameText"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <!-- Jersey No -->
+            <TextView
+                android:id="@+id/jerseyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jersey No:"
+                android:textSize="15sp"
+                android:textColor="#FF000000"
+                android:fontFamily="sans-serif"
+                android:textStyle="normal"/>
+
+            <!-- Position -->
+            <TextView
+                android:id="@+id/positionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Position:"
+                android:textColor="#FF000000"
+                android:fontFamily="sans-serif"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:layout_marginStart="80dp"/> <!-- spacing between Jersey & Position -->
+        </LinearLayout>
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/deleteBtn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/rounded_delete_24" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

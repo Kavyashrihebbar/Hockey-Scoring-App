@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="40dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/outline_arrow_back_24"
+                app:tint="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match Summary"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                android:layout_marginRight="30dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_gravity="center"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            card_view:cardCornerRadius="12dp"
+            card_view:cardElevation="4dp"
+            card_view:cardBackgroundColor="#E3E8FF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Match Details"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tvMatchSummaryDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date: 16/09/2025"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="19sp"/>
+
+                <TextView
+                    android:id="@+id/tvMatchSummaryTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time: 11:00 PM"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="19sp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            card_view:cardCornerRadius="12dp"
+            android:layout_gravity="center"
+            card_view:cardElevation="4dp"
+            card_view:cardBackgroundColor="#E3E8FF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Final Score"
+                    android:textStyle="bold"
+                    android:textSize="22sp"/>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="0,2"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    >
+
+                    <TableRow>
+                        <TextView
+                            android:id="@+id/tvTeamAName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Team A"
+                            android:textColor="#C2185B"
+                            android:textStyle="bold"
+                            android:textSize="21sp"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="vs"
+                            android:textSize="21sp"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tvTeamBName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Team B"
+                            android:textSize="21sp"
+                            android:textColor="#388E3C"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="12dp">
+                        <TextView android:id="@+id/tvTeamAGoals" android:text="5" android:textSize="20sp" android:gravity="center" />
+                        <TextView
+                            android:text="Goals"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:gravity="center"/>
+                        <TextView android:id="@+id/tvTeamBGoals" android:text="8" android:textSize="20sp" android:gravity="center"/>
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="12dp">
+                        <TextView android:id="@+id/tvTeamAFouls" android:text="3" android:textSize="20sp" android:gravity="center"/>
+                        <TextView android:text="Fouls" android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:gravity="center"/>
+                        <TextView android:id="@+id/tvTeamBFouls" android:text="2" android:textSize="20sp" android:gravity="center"/>
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="12dp">
+                        <TextView android:id="@+id/tvTeamASaves" android:text="2" android:textSize="20sp" android:gravity="center"/>
+                        <TextView android:text="Saves" android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:gravity="center"/>
+                        <TextView android:id="@+id/tvTeamBSaves" android:text="4" android:textSize="20sp" android:gravity="center"/>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_gravity="center"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            card_view:cardCornerRadius="12dp"
+            card_view:cardElevation="4dp"
+            card_view:cardBackgroundColor="#E3E8FF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Player Statistics"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="#E3E8FF">
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/teamToggleGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true"
+                        app:selectionRequired="true"
+                        android:layout_marginBottom="16dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnTeamA"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Team A"
+                            android:textColor="#C2185B"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnTeamB"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Team B"
+                            android:textColor="#388E3C"/>
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/playerStatsCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:id="@+id/statsContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp"
+                            android:background="@android:color/white">
+
+                            <TableLayout
+                                android:id="@+id/statsTable"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:stretchColumns="1">
+
+                                <TableRow android:background="#F0F0F0">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Player Name"
+                                        android:textStyle="bold"
+                                        android:padding="8dp"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Goals"
+                                        android:textStyle="bold"
+                                        android:padding="8dp"
+                                        android:gravity="end"/>
+                                </TableRow>
+
+                                <TableRow>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="John Doe"
+                                        android:padding="8dp"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3"
+                                        android:padding="8dp"
+                                        android:gravity="end"/>
+                                </TableRow>
+                            </TableLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

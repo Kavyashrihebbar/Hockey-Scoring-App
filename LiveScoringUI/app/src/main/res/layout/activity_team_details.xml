@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Top App Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/outline_arrow_back_24"
+            app:tint="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teams"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:layout_marginRight="30dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Team Card -->
+    <LinearLayout
+        android:id="@+id/teamCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="4dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/teamNameInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Team A"
+            android:hint="Enter team name"
+            android:padding="8dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/rounded_edittext_bg"/>
+
+        <ImageView
+            android:id="@+id/editTeamBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:src="@drawable/outline_mode_edit_outline_24"
+            android:contentDescription="Edit Team"/>
+    </LinearLayout>
+
+    <!-- Players Area -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp">
+
+        <!-- "No Players" Message -->
+        <TextView
+            android:id="@+id/noPlayersText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No players are added yet"
+            android:textSize="18sp"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <!-- Scrollable List of Players -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/teamContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+        </ScrollView>
+    </FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveTeamBtn"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:text="Save Team"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/blue"
+        app:iconGravity="textStart"
+        app:cornerRadius="90dp"
+        android:layout_marginBottom="4dp"/>
+    <!-- Add Player Button (fixed above nav bar) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addPlayerBtn"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:text="Add Player"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/blue"
+        app:cornerRadius="90dp"/>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        app:itemBackground="@android:color/transparent"
+        app:menu="@menu/bottom_nav_menu"/>
+</LinearLayout>

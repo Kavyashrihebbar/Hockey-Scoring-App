@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true"> <!-- Added this to prevent content overlap with status bar -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/outline_arrow_back_24"
+                app:tint="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Player Statistics"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                android:layout_marginRight="30dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <!--
+        *** Custom Top Bar REMOVED ***
+        The title and back button are now handled by the system's Action Bar
+        as configured in playerstats.java.
+        -->
+
+        <!-- Player Info Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E7ECFF"
+            android:padding="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgPlayerAvatar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:contentDescription="Player Avatar"
+                />
+
+            <TextView
+                android:id="@+id/tvPlayerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Player Name"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tvPlayerposition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Defender"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:textColor="#333333" />
+
+            <TextView
+                android:id="@+id/tvPlayerteamname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teamname"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#333333"/>
+
+            <TextView
+                android:id="@+id/tvPlayerjersey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jersey No"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#333333"/>
+
+            <!-- Stats -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="28dp">
+
+                <!-- Match Played Stat -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvMatchesPlayed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Matches Played: "
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:paddingBottom="14dp" />
+                    <TextView
+                        android:id="@+id/tvMatchesPlayedValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#CCCCCC"/>
+
+
+                <!-- Total Goals Stat -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total Goals: "
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp" />
+                    <TextView
+                        android:id="@+id/tvTotalGoalsValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#CCCCCC"/>
+
+                <!-- Yellow Cards Stat -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yellow Cards: "
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp" />
+                    <TextView
+                        android:id="@+id/tvYellowCardsValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#CCCCCC"/>
+
+                <!-- Red Cards Stat -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Red Cards: "
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp" />
+                    <TextView
+                        android:id="@+id/tvRedCardsValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- History Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:layout_marginTop="28dp"
+            android:layout_gravity="center" />
+
+        <!-- History Table -->
+        <TableLayout
+            android:id="@+id/historyTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:background="#E7ECFF"
+            android:padding="20dp"
+            android:stretchColumns="0,1,2">
+
+            <TableRow>
+                <TextView android:text="Matches" android:textStyle="bold"
+                    android:gravity="center" android:textSize="20sp"
+                    android:layout_weight="1" android:paddingBottom="10dp"/>
+                <TextView android:text="Goals" android:textStyle="bold"
+                    android:gravity="center" android:textSize="20sp"
+                    android:layout_weight="1" android:paddingBottom="10dp"/>
+                <TextView android:text="Fouls" android:textStyle="bold"
+                    android:gravity="center" android:textSize="20sp"
+                    android:layout_weight="1" android:paddingBottom="10dp"/>
+            </TableRow>
+
+            <!-- Example Match 1 Row -->
+            <TableRow android:layout_marginTop="13dp">
+                <TextView android:text="Match 1" android:gravity="center"
+                    android:textSize="16sp" android:layout_weight="1"/>
+                <TextView android:text="4" android:gravity="center"
+                    android:textSize="16sp" android:layout_weight="1"/>
+                <TextView android:text="1" android:gravity="center"
+                    android:textSize="16sp" android:layout_weight="1"/>
+            </TableRow>
+
+            <!-- Example Match 2 Row -->
+            <TableRow android:layout_marginTop="13dp">
+                <TextView android:text="Match 2" android:gravity="center"
+                    android:textSize="16sp" android:layout_weight="1"/>
+                <TextView android:text="0" android:gravity="center"
+                    android:textSize="16sp" android:layout_weight="1"/>
+                <TextView android:text="2" android:gravity="center"
+                    android:textSize="16sp" android:layout_weight="1"/>
+            </TableRow>
+
+            <!-- Example Match 3 Row -->
+            <TableRow android:layout_marginTop="13dp">
+                <TextView android:text="Match 3" android:gravity="center"
+                    android:textSize="16sp" android:layout_weight="1"/>
+                <TextView android:text="2" android:gravity="center"
+                    android:textSize="16sp" android:layout_weight="1"/>
+                <TextView android:text="0" android:gravity="center"
+                    android:textSize="16sp" android:layout_weight="1"/>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView>

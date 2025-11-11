@@ -1,0 +1,105 @@
+{
+  "project_info": {
+    "project_number": "805344192095",
+    "project_id": "hockey-scoring-app",
+    "storage_bucket": "hockey-scoring-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805344192095:android:8988d8182ae8438dae5dea",
+        "android_client_info": {
+          "package_name": "com.example.Hockey"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJil96T8-dCB2eCv9af39R05wDU8v9DI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805344192095:android:fd9b3a344a4590caae5dea",
+        "android_client_info": {
+          "package_name": "com.example.hockey"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJil96T8-dCB2eCv9af39R05wDU8v9DI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805344192095:android:f854df33e2e96e60ae5dea",
+        "android_client_info": {
+          "package_name": "com.example.hockey_scoring_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJil96T8-dCB2eCv9af39R05wDU8v9DI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805344192095:android:2ac441cb39df425eae5dea",
+        "android_client_info": {
+          "package_name": "com.example.livescoringui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJil96T8-dCB2eCv9af39R05wDU8v9DI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805344192095:android:0551f70fcb4a8ecfae5dea",
+        "android_client_info": {
+          "package_name": "com.example.teams_and_players"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJil96T8-dCB2eCv9af39R05wDU8v9DI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
